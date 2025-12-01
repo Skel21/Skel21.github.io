@@ -1,16 +1,314 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartłomiej Leks</title>
+</head>
+<body class="bg-neutral-900 text-neutral-300 antialiased">
+    
+    <header class="border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-8 py-24 md:py-36">
+            <div class="fade-in">
+                <div class="flex flex-col md:flex-row md:items-start md:gap-12">
+                    
+                    <div class="flex-grow">
+                        <h1 class="text-5xl md:text-6xl font-light tracking-tight text-neutral-50 mb-8 leading-tight">
+                            Bartłomiej Leks
+                        </h1>
+                        <p class="text-xl text-neutral-400 max-w-2xl leading-relaxed font-light">
+                        Master's student at ETH Zurich studying Quantum and Condensed Matter Physics.
+                        <br/>
+                        I work at the intersection of theory and computation, using analytic methods and numerical simulations.
+                        <br/>
+                        Currently exploring topological matter, fractons, tensor networks, and symmetry-aware ML.
+                        </p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 mt-12 md:mt-0">
+                        <img src="/photo_adamed.png" alt="Bartłomiej Leks profile photo" 
+                            class="w-40 h-40 md:w-56 md:h-56 object-cover rounded-full border-2 border-neutral-700 shadow-xl mx-auto md:mx-0 opacity-80">
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-8 mt-12 text-sm">
+                    <a href="mailto:lbartlomiej@student.ethz.ch" 
+                       class="text-neutral-500 hover:text-white transition-colors duration-300">
+                        Email
+                    </a>
+                    <a href="https://linkedin.com/in/bartlomiej-leks" 
+                       target="_blank"
+                       class="text-neutral-500 hover:text-white transition-colors duration-300">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/skel21" 
+                       target="_blank"
+                       class="text-neutral-500 hover:text-white transition-colors duration-300">
+                        GitHub
+                    </a>
+                    <a href="https://skel21.github.io/leks-cv/general.pdf" 
+                       target="_blank"
+                       class="text-neutral-500 hover:text-white transition-colors duration-300">
+                        CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 md:py-36 border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-8">
+            <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Research</h2>
+            
+            <div class="space-y-20">
+                <div class="grid md:grid-cols-12 gap-12">
+                    <div class="md:col-span-4">
+                        <div class="md:sticky md:top-8">
+                            <p class="text-sm text-neutral-600 mb-3">2025</p>
+                            <h3 class="text-2xl font-light text-neutral-50 mb-4 leading-snug">
+                                Fracton Physics in Twisted Bilayer Graphene
+                            </h3>
+                            <p class="text-sm text-neutral-500">
+                                Dr. Dan Mao, Prof. Titus Neupert<br/>
+                                University of Zurich
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-neutral-400 leading-relaxed mb-6">
+                            Working on understanding lineon excitations in magic-angle twisted bilayer graphene at one-third filling.
+                            Using tensor networks (DMRG) to study the low-energy physics, correlations and phase transitions, combined with analytical methods 
+                            like Bethe Ansatz and bosonization.
+                        </p>
+                        <p class="text-neutral-500 leading-relaxed mb-6">
+                            The goal is to connect simplified 1D models to the more complex 2D physics of 
+                            fractionalized states in moiré heterostructures. Presented this work at ETH's Theory Talks seminar.
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-xs text-neutral-600">
+                            <span>Tensor Networks</span>
+                            <span>·</span>
+                            <span>Moiré Systems</span>
+                            <span>·</span>
+                            <span>Topological Phases</span>
+                            <span>·</span>
+                            <span>Julia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-12">
+                    <div class="md:col-span-4">
+                        <div class="md:sticky md:top-8">
+                            <p class="text-sm text-neutral-600 mb-3">2024–25</p>
+                            <h3 class="text-2xl font-light text-white mb-4 leading-snug">
+                                Symmetry Informed Machine Learning for Molecular Dynamics
+                            </h3>
+                            <p class="text-sm text-neutral-500">
+                                Dr Shashank Saxena, Prof. Dennis Kochmann<br/>
+                                ETH Zurich
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-neutral-400 leading-relaxed mb-6">
+                            Developed molecular dynamics software using equivariant graph neural networks to optimize force field predictions.
+                        </p>
+                        <p class="text-neutral-500 leading-relaxed mb-6">
+                            The project focused on developing efficient ML models that respect physical E(3) symmetries, and optimizing 
+                            them for HPC environments and for incorporation into molecular dynamics simulations. 
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-xs text-neutral-600">
+                            <span>Graph Neural Networks</span>
+                            <span>·</span>
+                            <span>Python/C++</span>
+                            <span>·</span>
+                            <span>HPC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-12">
+                    <div class="md:col-span-4">
+                        <div class="md:sticky md:top-8">
+                            <p class="text-sm text-neutral-600 mb-3">2024</p>
+                            <h3 class="text-2xl font-light text-white mb-4 leading-snug">
+                                Ab-initio Study of Band Structure in Transition Metal Dichalcogenides
+                            </h3>
+                            <p class="text-sm text-neutral-500">
+                                Prof. Witold Bardyszewski<br/>
+                                University of Warsaw
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <p class="text-neutral-400 leading-relaxed mb-6">
+                            Developed own DFT and tight-binding code and used it, along with Quantum ESPRESSO, to study
+                            electronic band structures of transition metal dichalcogenides (TMDs). 
+                        </p>
+                        <p class="text-neutral-500 leading-relaxed mb-6">
+                            Focused on understanding the effects of different atoms on bandgap and band topology, comparing results to benchmark computational methods and to select materials for photophysical applications.
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-xs text-neutral-600">
+                            <span>DFT+U</span>
+                            <span>·</span>
+                            <span>Tight Binding</span>
+                            <span>·</span>
+                            <span>Python</span>
+                            <span>·</span>
+                            <span>Quantum ESPRESSO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-36 border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-8">
+            <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Highlights</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://www.young-physicists.ch" target="_blank" class="highlight-item aspect-[4/5] bg-neutral-800 rounded overflow-hidden group cursor-pointer">
+                    <div class="highlight-image w-full h-full relative">
+                        
+                        <div class="w-full h-full flex items-center justify-center text-neutral-600 bg-neutral-800">
+                            <img src="/ypf.jpeg" alt="Young Physicists Forum" class="w-full h-full object-cover">
+                        </div>
+                        <div class="highlight-text">
+                            <p class="text-xs text-neutral-500 mb-2">November 2025</p>
+                            <h3 class="text-xl font-light text-neutral-50 mb-3">
+                                Young Physicists Forum (YPF) Co-organization
+                            </h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                Co-organized the annual student forum at ETH Zurich focused this time on Quantum Science and Technology. The weekend event fostered exchange and networking among physics students from all Swiss universities through inspiring lectures and social activities.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://theorytalks.ethz.ch/student-talks/" target="_blank" class="highlight-item aspect-[4/5] bg-neutral-800 rounded overflow-hidden group cursor-pointer">
+                    <div class="highlight-image w-full h-full relative">
+                        <div class="w-full h-full flex items-center justify-center text-neutral-600 bg-neutral-800">
+                            <img src="/theory_talks.jpg" alt="Young Physicists Forum" class="w-full h-full object-cover">
+                        </div>
+                        <div class="highlight-text">
+                            <p class="text-xs text-neutral-500 mb-2">2025</p>
+                            <h3 class="text-xl font-light text-white mb-3">
+                                Theory Talks Presentation
+                            </h3>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                Presented a talk titled "1D Chains as a Window into Fractionalized Graphene States" at ETH's seminar series. The presentation covered the use of Bethe Ansatz, bosonization, and DMRG to study one-dimensional models relevant to fracton physics in twisted bilayer graphene.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-36 border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-8">
+            <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Side Projects</h2>
+            
+            <div class="space-y-8">
+                <a href="https://github.com/Skel21/gg-snowflakes" target="_blank" class="block group">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-light text-neutral-50 group-hover:text-neutral-400 transition-colors duration-300">
+                            Gravner-Griffeath Snowflake Simulator
+                        </h3>
+                    </div>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-3">
+                        A high performance implementation of the Gravner-Griffeath cellular automaton model for realistic snowflake crystal growth. The simulation core is written in C++ and compiled with Emscripten for smooth, in-browser execution.
+                        <a href="https://skel21.github.io/gg-snowflakes/" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 underline ml-1">
+                            (Live Demo)
+                        </a>
+                    </p>
+                    <div class="flex gap-4 text-xs text-neutral-700">
+                        <span>C++</span>
+                        <span>·</span>
+                        <span>WebAssembly (Emscripten)</span>
+                        <span>·</span>
+                        <span>Cellular Automata</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Skel21/xy-model" target="_blank" class="block group">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-xl font-light text-neutral-50 group-hover:text-neutral-400 transition-colors duration-300">
+                            XY Model Simulation
+                        </h3>
+                    </div>
+                    <p class="text-neutral-500 text-sm leading-relaxed mb-3">
+                        A C++ implementation of the classical 2D XY spin model, with Monte Carlo updates. Compiled to WebAssembly via Emscripten for interactive web visualization.
+                        <a href="https://skel21.github.io/xy-model/" target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 underline ml-1">
+                            (Live Demo)
+                        </a>
+                    </p>
+                    <div class="flex gap-4 text-xs text-neutral-700">
+                        <span>C++</span>
+                        <span>·</span>
+                        <span>WebAssembly (Emscripten)</span>
+                        <span>·</span>
+                        <span>Monte Carlo</span>
+                    </div>
+                </a>
+
+                </div>
+        </div>
+    </section>
+            <!--
+    <section class="py-24 md:py-36 border-b border-neutral-800">
+        <div class="max-w-5xl mx-auto px-8">
+            <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Technical Background</h2>
+
+            <div class="grid md:grid-cols-3 gap-16">
+                <div>
+                    <h3 class="text-xs font-medium text-neutral-600 uppercase tracking-wider mb-6">
+                        Methods
+                    </h3>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li>Tensor Networks (DMRG)</li>
+                        <li>Bethe Ansatz</li>
+                        <li>Bosonization</li>
+                        <li>DFT Calculations</li>
+                        <li>Monte Carlo Methods</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xs font-medium text-neutral-600 uppercase tracking-wider mb-6">
+                        Programming
+                    </h3>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li>Python (NumPy, SciPy)</li>
+                        <li>C++</li>
+                        <li>Julia</li>
+                        <li>PyTorch</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xs font-medium text-neutral-600 uppercase tracking-wider mb-6">
+                        Areas
+                    </h3>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li>Topological Matter</li>
+                        <li>Moiré Heterostructures</li>
+                        <li>Correlated Systems</li>
+                        <li>ML for Physics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <footer class="py-16">
+        <div class="max-w-5xl mx-auto px-8 text-center text-neutral-600 text-xs">
+            <p>Zürich, Switzerland</p>
+        </div>
+    </footer>
+</body>
 </html>
