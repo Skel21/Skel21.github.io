@@ -65,6 +65,15 @@ import HighlightsItem from "../components/HighlightsItem.astro";
         <div class="max-w-5xl mx-auto px-8">
             <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Research</h2>
             <div class="space-y-20">
+                <ResearchItem
+                    title="Existence of Non-abelian Fractional Topological Insulators in Moire materials (Master's Thesis)"
+                    date="now"
+                    description1="Theoretical Study of Landau Level models and Twisted Bilayer MoTe2 band structure, with the aim to propose first experimental realization of non-abelian fractional topological insulators"
+                    description2=""
+                    contributors="Dr. Glenn Wagner, Prof. Peter Derlet"
+                    place="ETH Zurich"
+                    tags={["Fractional Topological Insulators", "Exact Diagonalization", "Moire systems", "Python"]}
+                />
 
                 <ResearchItem
                 title="Fracton Physics in Twisted Bilayer Graphene"
@@ -104,6 +113,14 @@ import HighlightsItem from "../components/HighlightsItem.astro";
             <h2 class="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-16">Highlights</h2>
             
             <div class="grid md:grid-cols-2 gap-6">
+                <HighlightsItem
+                    title="Topology and Entanglement in Interacting Quantum Matter"
+                    date="February 2026"
+                    description="Took part in an amazing conference in Benasque, Spain, focused on theoretical advances in tensor networks, topological matter, quantum computing and entanglement."
+                    url="https://benasque.org/2026etqm/"
+                    photoSrc="https://benasque.org/general/img/2026etqm_large.jpg"
+                />
+
                 <HighlightsItem
                     title="Young Physicists Forum (YPF) Co-organization"
                     date="November 2025"
@@ -200,6 +217,7 @@ import HighlightsItem from "../components/HighlightsItem.astro";
     <footer class="py-16">
         <div class="max-w-5xl mx-auto px-8 text-center text-neutral-600 text-xs">
             <p>Zürich, Switzerland</p>
+            <p>Last updated: April 2026</p>
         </div>
     </footer>
 </body>
