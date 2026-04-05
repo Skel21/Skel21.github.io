@@ -1,0 +1,45 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    description1: string;
+    description2: string;
+    contributors: string;
+    place: string;
+    tags: string[];
+}
+
+const props = Astro.props as Props;
+---
+
+<div class="space-y-20">
+    <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+            <div class="md:sticky md:top-8">
+                <p class="text-sm text-neutral-600 mb-3">{props.date}</p>
+                <h3 class="text-2xl font-light text-neutral-50 mb-4 leading-snug">
+                    {props.title}
+                </h3>
+                <p class="text-sm text-neutral-500">
+                    {props.contributors}<br/>
+                    {props.place}
+                </p>
+            </div>
+        </div>
+        <div class="md:col-span-8">
+            <p class="text-neutral-400 leading-relaxed mb-6">
+                {props.description1}
+            </p>
+            <p class="text-neutral-500 leading-relaxed mb-6">
+                {props.description2}
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs text-neutral-600">
+                {props.tags.map((tag, index) => (
+                    <>
+                        {index > 0 && <span>·</span>}
+                        <span>{tag}</span>
+                    </>
+                ))}
+            </div>
+        </div>
+    </div>

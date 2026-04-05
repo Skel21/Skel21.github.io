@@ -1,0 +1,34 @@
+---
+interface Props {
+    title: string;
+    projectUrl: string;
+    demoUrl?: string;
+    description: string;
+    tags: string[];
+}
+
+const props = Astro.props as Props;
+---
+<a href={props.projectUrl} target="_blank" class="block group">
+    <div class="flex justify-between items-baseline mb-2">
+        <h3 class="text-xl font-light text-neutral-50 group-hover:text-neutral-400 transition-colors duration-300">
+            {props.title}
+        </h3>
+    </div>
+    <p class="text-neutral-500 text-sm leading-relaxed mb-3">
+        {props.description}
+        {props.demoUrl && (
+            <a href={props.demoUrl} target="_blank" class="text-neutral-400 hover:text-white transition-colors duration-300 underline ml-1">
+                (Live Demo)
+            </a>
+        )}
+    </p>
+    <div class="flex gap-4 text-xs text-neutral-700">
+        {props.tags.map((tag, index) => (
+            <>
+                {index > 0 && <span>·</span>}
+                <span>{tag}</span>
+            </>
+        ))}
+    </div>
+</a>
